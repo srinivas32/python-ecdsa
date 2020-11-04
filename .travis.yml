@@ -69,6 +69,81 @@ matrix:
         env: TOX_ENV=pypy3
   allow_failures:
       - python: nightly
+      # added power support arch ppc64le.
+      - python: 2.7
+        env: INSTRUMENTAL=yes
+        arch: ppc64le
+      - python: 2.6
+        env: TOX_ENV=py26
+        arch: ppc64le
+      - python: 2.7
+        env: TOX_ENV=py27
+        arch: ppc64le
+      - python: 2.7
+        env: TOX_ENV=py27_old_gmpy
+        arch: ppc64le
+      - python: 2.7
+        env: TOX_ENV=py27_old_gmpy2
+        arch: ppc64le
+      - python: 2.7
+        env: TOX_ENV=py27_old_six
+        arch: ppc64le
+      - python: 2.7
+        env: TOX_ENV=gmpypy27
+        arch: ppc64le
+      - python: 2.7
+        env: TOX_ENV=gmpy2py27
+        arch: ppc64le
+      - python: 3.3
+        env: TOX_ENV=py33
+        arch: ppc64le
+      - python: 3.4
+        env: TOX_ENV=py34
+        arch: ppc64le
+      - python: 3.5
+        env: TOX_ENV=py35
+        arch: ppc64le
+      - python: 3.6
+        env: TOX_ENV=py36
+        arch: ppc64le
+      - python: 3.7
+        env: TOX_ENV=py37
+        arch: ppc64le
+        dist: bionic
+        sudo: true
+      - python: 3.8
+        env: TOX_ENV=codechecks
+        arch: ppc64le
+        dist: bionic
+        sudo: true
+      - python: 3.8
+        env: TOX_ENV=py38
+        arch: ppc64le
+        dist: bionic
+        sudo: true
+      - python: 3.8
+        env: TOX_ENV=gmpypy38
+        arch: ppc64le
+        dist: bionic
+        sudo: true
+      - python: 3.8
+        env: TOX_ENV=gmpy2py38
+        arch: ppc64le
+        dist: bionic
+        sudo: true
+      - python: nightly
+        env: TOX_ENV=py
+        arch: ppc64le
+        dist: bionic
+        sudo: true
+      - python: pypy
+        env: TOX_ENV=pypy
+        arch: ppc64le
+      - python: pypy3
+        env: TOX_ENV=pypy3
+        arch: ppc64le
+  allow_failures:
+      - python: nightly
 
 # for instrumental we're checking if the coverage changed from base branch
 # so collect that info
